@@ -56,9 +56,10 @@ var fetch = function (query) {
     dataType: 'json',
     success: function (data) {
       addBooks(data);
+      $('.results-header').css('display', 'block');
     },
     complete: function () {
-      $('.loading').css('display', 'none');
+      $('.loading-img').css('display', 'none');
     },
     error: function (jqXHR, textStatus, errorThrown) {
       console.log(textStatus);
@@ -67,7 +68,7 @@ var fetch = function (query) {
 };
 
 $('.search').on('click', function () {
-  $('.loading').css('display', 'block');
+  $('.loading-img').css('display', 'block');
   var searchValue = $('#search-query').val();
   fetch(searchValue);
 });

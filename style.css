@@ -11,8 +11,12 @@ body {
   margin-bottom: 40px;
 }
 
-.loading {
+.loading-img {
   width: 10%;
+  display: none;
+}
+
+.results-header {
   display: none;
 }
 

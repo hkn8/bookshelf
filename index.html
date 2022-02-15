@@ -40,8 +40,10 @@
           <img
             src="loading-spinner.png"
             alt="loading spinner"
-            class="loading"
+            class="loading-img"
           />
+
+          <h3 class="results-header">Top 10 Results</h3>
 
           <div class="books row"></div>
         </div>
@@ -50,7 +52,7 @@
 
     <script id="book-template" type="text/x-handlebars-template">
       <div class="book col-md-6">
-        <h4>{{title}}</h4>
+        <h5>{{title}}</h5>
         <div>Author: <strong>{{author}}</strong></div>
         <div>Pages: <strong>{{pageCount}}</strong></div>
         <div>ISBN: <strong>{{isbn}}</strong></div>
