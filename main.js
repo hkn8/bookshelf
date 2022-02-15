@@ -1,3 +1,9 @@
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable object-shorthand */
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
+
 var books = [
   {
     title: 'Harry Potter',
@@ -51,6 +57,9 @@ var fetch = function (query) {
     success: function (data) {
       addBooks(data);
     },
+    complete: function () {
+      $('.loading').css('display', 'none');
+    },
     error: function (jqXHR, textStatus, errorThrown) {
       console.log(textStatus);
     },
@@ -58,6 +67,7 @@ var fetch = function (query) {
 };
 
 $('.search').on('click', function () {
+  $('.loading').css('display', 'block');
   var searchValue = $('#search-query').val();
   fetch(searchValue);
 });

@@ -11,6 +11,11 @@ body {
   margin-bottom: 40px;
 }
 
+.loading {
+  width: 10%;
+  display: none;
+}
+
 .books .col-md-6 {
   margin-top: 15px;
   margin-bottom: 15px;
