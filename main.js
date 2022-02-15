@@ -1,3 +1,9 @@
+/* eslint-disable prefer-arrow-callback */
+/* eslint-disable object-shorthand */
+/* eslint-disable no-var */
+/* eslint-disable vars-on-top */
+/* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
+
 var books = [];
 
 var renderBooks = function () {
@@ -39,10 +45,8 @@ var fetch = function (query) {
     dataType: 'json',
     success: function (data) {
       addBooks(data);
-      $('.results-header').css('display', 'block');
-    },
-    complete: function () {
       $('.loading-img').css('display', 'none');
+      $('.results-header').css('display', 'block');
     },
     error: function (jqXHR, textStatus, errorThrown) {
       console.log(textStatus);
