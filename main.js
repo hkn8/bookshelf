@@ -1,9 +1,3 @@
-/* eslint-disable prefer-arrow-callback */
-/* eslint-disable object-shorthand */
-/* eslint-disable no-var */
-/* eslint-disable vars-on-top */
-/* eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }] */
-
 var books = [
   {
     title: 'Harry Potter',
