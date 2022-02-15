@@ -1,13 +1,4 @@
-var books = [
-  {
-    title: 'Harry Potter',
-    author: 'J.K. Rowling',
-    imageURL:
-      'https://books.google.com/books/content?id=WV8pZj_oNBwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api',
-    isbn: '9781921479311',
-    pageCount: 268,
-  },
-];
+var books = [];
 
 var renderBooks = function () {
   $('.books').empty();
@@ -22,8 +13,6 @@ var renderBooks = function () {
 };
 
 var addBooks = function (data) {
-  books = [];
-
   for (var i = 0; i < data.items.length; i++) {
     var book = {
       title: data.items[i].volumeInfo.title || null,
